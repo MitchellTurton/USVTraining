@@ -1,0 +1,63 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "../Virtuoso"
+	},
+	{
+		"path": "../../../Documents/python_projects/Path_Planning"
+	}
+],
+  "settings": {
+    "python.autoComplete.extraPaths": [
+      "/home/mbturton/dev_ws/install/training_mapping/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/virtuoso_autonomy/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/virtuoso_sensors/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/virtuoso_perception/local/lib/python3.10/dist-packages",
+      "/home/mbturton/dev_ws/install/virtuoso_navigation/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/virtuoso_msgs/local/lib/python3.10/dist-packages",
+      "/home/mbturton/dev_ws/install/virtuoso_mapping/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/virtuoso_localization/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/virtuoso_controller/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/virtuoso_auxiliary/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/ublox_ubx_msgs/local/lib/python3.10/dist-packages",
+      "/home/mbturton/dev_ws/install/ublox_ubx_interfaces/local/lib/python3.10/dist-packages",
+      "/home/mbturton/dev_ws/build/turtlesim_adventures",
+      "/home/mbturton/dev_ws/install/turtlesim_adventures/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/training_navigation/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/training_perception/local/lib/python3.10/dist-packages",
+      "/home/mbturton/dev_ws/install/training_msgs/local/lib/python3.10/dist-packages",
+      "/home/mbturton/dev_ws/install/training_localization/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/training_controller/lib/python3.10/site-packages",
+      "/home/mbturton/vrx_ws/install/local/lib/python3.10/dist-packages",
+      "/opt/ros/humble/lib/python3.10/site-packages",
+      "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+      "/home/mbturton/dev_ws/install/training_mapping/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/virtuoso_autonomy/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/virtuoso_sensors/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/virtuoso_perception/local/lib/python3.10/dist-packages",
+      "/home/mbturton/dev_ws/install/virtuoso_navigation/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/virtuoso_msgs/local/lib/python3.10/dist-packages",
+      "/home/mbturton/dev_ws/install/virtuoso_mapping/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/virtuoso_localization/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/virtuoso_controller/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/virtuoso_auxiliary/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/ublox_ubx_msgs/local/lib/python3.10/dist-packages",
+      "/home/mbturton/dev_ws/install/ublox_ubx_interfaces/local/lib/python3.10/dist-packages",
+      "/home/mbturton/dev_ws/build/turtlesim_adventures",
+      "/home/mbturton/dev_ws/install/turtlesim_adventures/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/training_navigation/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/training_perception/local/lib/python3.10/dist-packages",
+      "/home/mbturton/dev_ws/install/training_msgs/local/lib/python3.10/dist-packages",
+      "/home/mbturton/dev_ws/install/training_localization/lib/python3.10/site-packages",
+      "/home/mbturton/dev_ws/install/training_controller/lib/python3.10/site-packages",
+      "/home/mbturton/vrx_ws/install/local/lib/python3.10/dist-packages",
+      "/opt/ros/humble/lib/python3.10/site-packages",
+      "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+  }
+}
