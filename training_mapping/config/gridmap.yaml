@@ -4,4 +4,6 @@ gridmap_generator:
     grid_width: 100 # uint32: num_cols of gridmap
     grid_height: 100 # uint32: num_rows of gridmap
     update_delay: 1.0 # float32: How long between map updates
+    point_weight: 13 # int32: how much weight does each point in a cell hold
+    decay_rate: 2 # int32: how quickly does a cell lose its value if no points are detected
     z_filter_height: 0.1 # float32: How many meters below boat before points filtered out

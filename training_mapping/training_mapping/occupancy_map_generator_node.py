@@ -23,6 +23,8 @@ class GridMapGenerator(Node):
             ('grid_width', 100),
             ('grid_height', 100),
             ('update_delay', 0.5),
+            ('point_weight', 13),
+            ('decay_rate', 10),
             ('z_filter_height', 1.0)
         ])
 
@@ -33,6 +35,11 @@ class GridMapGenerator(Node):
 
         self.z_filter_height: float = self.get_parameter(
             'z_filter_height').value
+        self.point_weight: int = self.get_parameter('point_weight').value
+        self.decay_rate: int = self.get_parameter('decay_rate').value
+
+        self.get_logger().info(
+            f'point_weight: {self.point_weight}, decay_rate: {self.decay_rate}')
 
         # Creating Publishers and Subscribers
         self.latest_pointcloud: np.array = None
@@ -125,9 +132,28 @@ class GridMapGenerator(Node):
             binned_tiles: np.array = self.bin_points(
                 self.latest_pointcloud, self.grid_res)
 
+            curr_scan = np.zeros(
+                (self.grid_width * self.grid_height), dtype=np.int8)
+
             for tile in binned_tiles:
                 tile_index = self.grid_width * (tile[0]) + tile[1]
-                self.occupancy_map.data[tile_index] = 100
+
+                # Pre-Decay implementation
+                # self.occupancy_map.data[tile_index] = 100
+
+                # With Decay
+                curr_scan[tile_index] += 1
+
+            for i in range(curr_scan.shape[0]):
+                curr_val = self.occupancy_map.data[i]
+
+                if curr_scan[i] > 0:
+                    self.occupancy_map.data[i] = min(
+                        curr_val + curr_scan[i] * self.point_weight, 100)
+                else:
+                    self.occupancy_map.data[i] = max(
+                        curr_val - self.decay_rate, 0)
+
         elif self.latest_pointcloud is None:
             self.get_logger().info("No PointCloud2 to process")
         else:
@@ -148,7 +174,8 @@ class GridMapGenerator(Node):
         binned_points = binned_points[np.all((binned_points[:, :2] >= [0, 0]) & (
             binned_points[:, :2] < [self.grid_width, self.grid_height]), axis=1)]
 
-        binned_points = np.unique(binned_points.astype(np.int32), axis=0)
+        # binned_points = np.unique(binned_points.astype(np.int32), axis=0)
+        binned_points = binned_points.astype(np.int32)
 
         return binned_points
 
